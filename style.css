@@ -1,0 +1,114 @@
+body{
+  background:linear-gradient(#8AEDFA11,#52D7F4);
+  background-repeat: no-repeat;
+  width:99%;
+  height:100vh;
+  overflow:hidden;
+}
+.canvas{
+  position:relative;
+  margin:20px auto;
+  width:768px;
+  height:400px;
+  overflow:hidden;
+}
+#dragon_boat {
+  position:absolute;
+  left:150px;
+  top:25px;
+  animation: dragon_boat_forwarding 1s ease-out 0s infinite normal forwards running;
+}
+
+@keyframes dragon_boat_forwarding {
+  0%,95%,100%{
+    transform:tranlatey(0);
+  }
+  50%,80%{
+    transform:translatey(5px);
+  }
+}
+
+#wave1 {
+  position:absolute;
+  top:195px;
+  left:0px;
+  animation: wave 2s linear 0s infinite normal forwards running;
+
+}
+#wave2 {
+  position:absolute;
+  top:-62px;
+  top:238px;
+  animation: wave 2.5s linear 0s infinite normal forwards running;
+
+}
+#wave3 {
+  position:absolute;
+  top:281px;
+  left:-26px;
+  animation: wave 3s linear 0s infinite normal forwards running;
+}
+
+@keyframes wave {
+  0%{
+    transform:translatex(0);
+  }
+  100% {
+    transform:translate(-111px);
+  }
+}
+
+.sculler{
+  position:absolute;
+  top:81px;
+}
+
+#sculler_1{
+  left:280px;
+}
+#sculler_2{
+  left:360px;
+}
+#sculler_3{
+  left:440px;
+}
+#scull{
+  transform-origin: 8px 60px;
+  animation: sculling 1s ease-in-out 0s infinite normal forwards running;
+}
+#sculler_1_body {
+  position:absolute;
+  left:287px;
+  top:129px;
+}
+#sculler_2_body {
+  position:absolute;
+  left:367px;
+  top:129px;
+}
+#sculler_3_body {
+  position:absolute;
+  left:447px;
+  top:129px;
+}
+#head {
+  transform-origin: 16px 58px;
+  animation: head_down 1s ease-in-out 0s infinite normal forwards running;
+}
+@keyframes sculling {
+  0%,100% {
+    transform:rotatez(0);
+  }
+  50%,90% {
+    transform:rotatez(60deg);
+  }
+}
+@keyframes head_down {
+  0%,100%{
+    transform:rotatez(0);
+  }
+  50%,90% {
+    transform:rotatez(38deg);
+  }
+  
+}
